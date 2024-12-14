@@ -49,7 +49,7 @@ def start_game():
                     if st.session_state.word_to_guess[i] == guess:
                         st.session_state.correct_guesses[i] = guess
             else:
-                st.write(f"Oops! The letter {guess} is not in the word.")
+                st.write(f"The letter {guess} is not in the word.")
                 st.session_state.remaining_attempts -= 1
         else:
             st.write("Please enter a valid letter.")
@@ -67,7 +67,7 @@ def start_game():
 if "game_started" not in st.session_state or not st.session_state.game_started:
     st.title("Hangman Game")
     st.write("by Dulce Funez")
-    st.write("Welcome to Hangman! Ready to play?")
+    st.write("Welcome to Hangman!")
     
     if st.button("Start Game"):
         st.session_state.game_started = True
